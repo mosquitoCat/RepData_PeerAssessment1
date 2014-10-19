@@ -1,4 +1,4 @@
-title: "peer assessment 1"
+peer assessment 1
 ============================
 output: md_document
 
