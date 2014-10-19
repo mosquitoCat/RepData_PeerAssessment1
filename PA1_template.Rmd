@@ -1,7 +1,7 @@
----
 title: "peer assessment 1"
+============================
 output: md_document
----
+
 
 This is an R Markdown document for the peer assessment 1 of the Reprducible Research course. 
 
