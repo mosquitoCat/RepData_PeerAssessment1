@@ -89,6 +89,3 @@ data8 <- rbind(data6, data7)
 xyplot(steps ~ interval | weekDay, data = data8, group = weekDay, layout = c(1, 2), type = "l")
 ```
 
-
-
-ß
