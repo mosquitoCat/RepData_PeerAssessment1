@@ -1,11 +1,11 @@
-peer assessment 1
-============================
+---
+title: "PA1"
 output: md_document
-
+---
 
 This is an R Markdown document for the peer assessment 1 of the Reprducible Research course. 
 
-# Loading and preprocessing the data
+## Loading and preprocessing the data
 
 Load the dataset from the course webset and transform the data into a format suitable for the analysis if necessary.
 
@@ -19,7 +19,7 @@ summary(data)
 head(data)
 ```
 
-# What is mean total number of steps taken per day?
+## What is mean total number of steps taken per day?
 
 ```{r}
 library(plyr)
@@ -35,7 +35,7 @@ cat("the mean total number of steps taken per day is: ", mean)
 cat("the median total number of steps taken per day is:", median)
 ```
 
-# What is the average daily activity pattern?
+## What is the average daily activity pattern?
 
 ``` {r}
 ## Make a time series plot of the 5-minte interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
@@ -47,7 +47,7 @@ plot(data3$interval, data3$steps, xlab = "Interval", ylab = "Average number of s
 intervalName <- data3$interval[which.max(data3$steps)]
 cat("the 5-minte interval on average across all the days contains the maximum number of steps is:", intervalName)
 ```
-# Imputing missing values
+## Imputing missing values
 
 ```{r}
 data4 <- data
@@ -69,7 +69,7 @@ median <- median(data5$steps, na.rm = TRUE)
 cat("the mean total number of steps taken per day is: ", mean)
 cat("the median total number of steps taken per day is:", median)
 ```
-# Are there differences in activity pattern between weekdays and weekends?
+## Are there differences in activity pattern between weekdays and weekends?
 
 ```{r}
 library(lattice)
@@ -91,3 +91,4 @@ xyplot(steps ~ interval | weekDay, data = data8, group = weekDay, layout = c(1, 
 
 
 
+ß

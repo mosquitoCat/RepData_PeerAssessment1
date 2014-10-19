@@ -2,7 +2,7 @@ This is an R Markdown document for the peer assessment 1 of the
 Reprducible Research course.
 
 Loading and preprocessing the data
-==================================
+----------------------------------
 
 Load the dataset from the course webset and transform the data into a
 format suitable for the analysis if necessary.
@@ -34,7 +34,7 @@ format suitable for the analysis if necessary.
     ## 6    NA 2012-10-01       25
 
 What is mean total number of steps taken per day?
-=================================================
+-------------------------------------------------
 
     library(plyr)
     ## Make a histogram of the total number of steps taken each day
@@ -58,7 +58,7 @@ unnamed-chunk-2](./PA1_template_files/figure-markdown_strict/unnamed-chunk-2.png
     ## the median total number of steps taken per day is: 10765
 
 What is the average daily activity pattern?
-===========================================
+-------------------------------------------
 
     ## Make a time series plot of the 5-minte interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
     ## Sorting the dataframe by the 5-minte interval and calculate the average to generate a new data frame data3
@@ -76,7 +76,7 @@ unnamed-chunk-3](./PA1_template_files/figure-markdown_strict/unnamed-chunk-3.png
     ## the 5-minte interval on average across all the days contains the maximum number of steps is: 835
 
 Imputing missing values
-=======================
+-----------------------
 
     data4 <- data
     ## Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with NAs)
@@ -110,7 +110,7 @@ unnamed-chunk-4](./PA1_template_files/figure-markdown_strict/unnamed-chunk-4.png
     ## the median total number of steps taken per day is: 10766
 
 Are there differences in activity pattern between weekdays and weekends?
-========================================================================
+------------------------------------------------------------------------
 
     library(lattice)
     ## For this part the weekdays() function may be of some help here. Use the dataset with the filled-in missing values for this part, which is data4.
@@ -130,3 +130,5 @@ Are there differences in activity pattern between weekdays and weekends?
 
 ![plot of chunk
 unnamed-chunk-5](./PA1_template_files/figure-markdown_strict/unnamed-chunk-5.png)
+
+ß
