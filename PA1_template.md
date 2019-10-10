@@ -150,6 +150,23 @@ with(summary_old2, plot(x = interval, y = average, type = "l", lwd = 2, col = "o
 ![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
 </div>
 
+Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
+
+<div class = "blue">
+
+```r
+max <- max(summary_old2$average)
+interval_max <- summary_old2[summary_old2$average == max, ]$interval
+interval_max
+```
+
+```
+## [1] 835
+```
+</div>
+
+**The 5-minute interval 835 contains the maximum number of steps across all the days in the dataset.**
+
 ### Imputing missing values
 
 Note that there are a number of days/intervals where there are missing values, NAs. The presence of missing days may introduce bias into some calculations or summaries of the data. 
@@ -209,7 +226,7 @@ head(summary_new)
 hist(summary_new$total, main = "New histogram of the total number of steps taken each day", xlab = "total number of steps", col = "darkorange")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
 </div>
 
 Calculate and report the mean and median of the total number of steps taken per day.
@@ -293,5 +310,5 @@ library(lattice)
 with(summary_new_week, xyplot(average ~ interval|day, type = "l", lwd = 2, col = "darkorange", xlab = "5-minute interval", ylab = "average number of steps taken across all days", layout= c(1, 2)))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
 </div>
